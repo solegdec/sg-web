@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Bangers&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poiret+One&family=Raleway:wght@100;400;800&family=Righteous&family=Roboto+Condensed:ital,wght@0,300;1,300&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Square+Peg&display=swap');
+*{  
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+
+}
+
+.navbar a{
+color: #456c6b;
+text-transform: uppercase;
+}
+.fondo-container{
+position: relative;
+  overflow: hidden;
+  width: 100%;
+  opacity: 0.7;
+  background-size: cover;
+  background-position: center;
+  animation: cambiar-fondo 15s infinite linear;
+  
+}
+.texto-izquierda,
+.texto-derecha {
+  position: absolute;
+  top: 50%;
+  color: white;
+  opacity: 0;
+  animation: entrada-texto-lateral 2s ease forwards 3s;
+}
+.texto-izquierda {
+    transform: translateY(-50%);
+  }
+  .imgizq{
+    opacity: 0.7;
+  }
+  .texto-derecha {
+    right: 0;
+    transform: translateY(-50%);
+  }
+.texto-video1 {
+    position: relative;
+    z-index: 1;
+    color: rgb(58, 57, 57); 
+    text-align: center;
+    padding: 20px;
+    animation: entrar-izquierda 3s ease forwards ;
+  }
+  .texto-video2 {
+    position: relative;
+    z-index: 1;
+    color: rgb(58, 57, 57);  
+    text-align: center;
+    padding: 20px;
+    animation: entrar-derecha 3s ease forwards ;
+  }
+  .texto-video3 {
+    position: relative;
+    z-index: 1;
+    color: rgb(58, 57, 57); 
+    text-align: center;
+    padding: 20px;
+    animation: entrar-izquierda 3s ease forwards  ;
+  }
+  .texto-video1,.texto-video2,.texto-video3{
+    text-shadow:2px 2px 2px  #f7f8f8;
+    color:  #171818;
+    font-weight: bold;
+    /* font-size: 2em; */
+    
+  }
+#video-background {
+position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  
+}
+#img-background {
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    opacity: 0.8;
+      
+    }
+.footer{
+background-color: #456c6b;
+bottom: 0;
+}
+.copyright{
+background-color: #5d8181;
+}
+/*------------------------------------------------*/
+/*animaciones*/
+@keyframes cambiar-fondo {
+  0%, 100% {
+      background-image: url('../img/idea3.jpg');
+     
+  }
+  33.33% {
+      background-image: url('../img/figma2.jpg');
+     
+  }
+  66.66% {
+      background-image: url('../img/javascript-white.jpg');
+  }
+}
+@keyframes entrar-derecha {
+from {
+opacity: 0;
+transform: translateX(100%);
+}
+to {
+opacity: 1;
+transform: translateX(0);
+}
+}
+@keyframes entrar-izquierda {
+from {
+opacity: 0;
+transform: translateX(-100%);
+}
+to {
+opacity: 1;
+transform: translateX(0);
+}
+}
+@keyframes entrada-texto-lateral {
+from {
+opacity: 0;
+}
+to {
+opacity: 1;
+}
+}
+
+/*------------------------------------------------*/
+/*media queries*/
+
+
+
+
+
+@media screen and (max-width: 767px) {
+    .texto-izquierda,
+    .texto-derecha{
+      display:none;
+    }
+    }
