@@ -18,6 +18,7 @@ position: relative;
   background-size: cover;
   background-position: center;
   animation: cambiar-fondo 15s infinite linear;
+  padding:5%;
   
 }
 .texto-izquierda,
@@ -43,30 +44,34 @@ position: relative;
     z-index: 1;
     color: rgb(58, 57, 57); 
     text-align: center;
-    padding: 20px;
+    padding: 2rem;
     animation: entrar-izquierda 3s ease forwards ;
+    animation-delay: 2s;
   }
   .texto-video2 {
     position: relative;
     z-index: 1;
     color: rgb(58, 57, 57);  
     text-align: center;
-    padding: 20px;
+    padding: 2rem;
     animation: entrar-derecha 3s ease forwards ;
+    
   }
   .texto-video3 {
     position: relative;
     z-index: 1;
     color: rgb(58, 57, 57); 
     text-align: center;
-    padding: 20px;
-    animation: entrar-izquierda 3s ease forwards  ;
+    padding: 2rem;
+    animation: entrar-derecha 3s ease forwards  ;
+    animation-delay: 4.5s;
   }
   .texto-video1,.texto-video2,.texto-video3{
     text-shadow:2px 2px 2px  #f7f8f8;
     color:  #171818;
     font-weight: bold;
     /* font-size: 2em; */
+    opacity: 0; 
     
   }
 #video-background {
@@ -86,7 +91,7 @@ position: absolute;
     background-size: cover;
     background-position: center;
     width: 100%;
-    opacity: 0.8;
+    opacity: 0.5;
       
     }
 .footer{
@@ -96,6 +101,39 @@ bottom: 0;
 .copyright{
 background-color: #5d8181;
 }
+#btnIrArriba {
+  display: none; /* Ocultar el botón por defecto */
+  position: fixed; /* Posición fija para que el botón esté siempre visible */
+  bottom: 20px; /* Distancia desde abajo */
+  right: 20px; /* Distancia desde la derecha */
+  z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+  padding: 10px 15px; /* Ajusta el padding según sea necesario */
+  background-color: #122b2a; /* Color de fondo del botón */
+  color: #fff; /* Color del texto */
+  border: none; /* Quita el borde */
+  border-radius: 5px; /* Añade bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+#btnIrArriba:hover {
+
+  background-color: #555858; /* Color de fondo del botón */
+}
+/* Estilos para el botón de WhatsApp */
+.whatsapp-button {
+  position: fixed; /* Fijar la posición */
+  bottom: 20px; /* Distancia desde la parte inferior */
+  left: 20px; /* Distancia desde la izquierda */
+  z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+}
+
+.whatsapp-button img {
+  width: 60px; /* Ajustar el tamaño del ícono según sea necesario */
+  height: auto;
+  border-radius: 50%; /* Redondear los bordes del ícono */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Agregar una sombra al botón */
+}
+
 /*------------------------------------------------*/
 /*animaciones*/
 @keyframes cambiar-fondo {
@@ -108,7 +146,7 @@ background-color: #5d8181;
      
   }
   66.66% {
-      background-image: url('../img/javascript-white.jpg');
+      background-image: url('../img/codigo.jpg');
   }
 }
 @keyframes entrar-derecha {
