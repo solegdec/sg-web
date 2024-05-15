@@ -1,6 +1,10 @@
+document.addEventListener("DOMContentLoaded", function() {
+    manejarEnlacesScroll();
+});
 function manejarEnlacesScroll() {
     var enlacesMostrarDivNavbar = document.querySelectorAll(".nav-item.nav-link");
     var enlacesMostrarDivFooter = document.querySelectorAll("#enlaceDisenoFooter, #enlaceIdentidadFooter, #enlaceGraficaFooter"); // Enlaces del footer
+
     enlacesMostrarDivNavbar.forEach(function(enlace) {
         enlace.addEventListener("click", function(event) {
             event.preventDefault();
@@ -13,6 +17,7 @@ function manejarEnlacesScroll() {
             }
         });
     });
+
     enlacesMostrarDivFooter.forEach(function(enlace) {
         enlace.addEventListener("click", function(event) {
             event.preventDefault();
@@ -25,6 +30,7 @@ function manejarEnlacesScroll() {
             }
         });
     });
+
     function mostrarDivYDesplazar(divObjetivo) {
         document.querySelectorAll(".cajas").forEach(function(div) {
             div.style.display = "none";
@@ -32,12 +38,16 @@ function manejarEnlacesScroll() {
 
         divObjetivo.style.display = "block";
 
-        divObjetivo.scrollIntoView({ behavior: 'auto' });
+        // Ajustar margen superior para dejar espacio para el navbar fijo
+        var navbarHeight = document.querySelector("nav").offsetHeight; // Altura del navbar
+        var margenSuperior = navbarHeight + 100; // Ajuste adicional para espacio
+        window.scrollTo({
+            top: divObjetivo.offsetTop - margenSuperior,
+            behavior: 'auto'
+        });
     }
 }
-document.addEventListener("DOMContentLoaded", function() {
-    manejarEnlacesScroll();
-});
+
 function manejarBotonIrArriba() {
     window.onscroll = function() { mostrarBotonIrArriba() };
 

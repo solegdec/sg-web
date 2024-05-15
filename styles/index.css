@@ -10,6 +10,9 @@ margin: 0;
 color: #456c6b;
 text-transform: uppercase;
 }
+.navlogo{
+ width:20rem; 
+}
 .fondo-container{
 position: relative;
   overflow: hidden;
@@ -183,11 +186,19 @@ opacity: 1;
 
 
 
+/* Media query para tablet */
+@media only screen and (max-width: 768px) {
+  
+  .texto-izquierda,
+  .texto-derecha{
+    display:none;
+  }
+}
+
+/* Media query para celular */
+@media only screen and (max-width: 480px) {
+  
+}
 
 
-@media screen and (max-width: 767px) {
-    .texto-izquierda,
-    .texto-derecha{
-      display:none;
-    }
-    }
+
