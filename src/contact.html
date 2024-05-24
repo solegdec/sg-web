@@ -21,26 +21,42 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light text-center">
-    <a class="navbar-brand" href="index.html">
-  <img src="../img/sghorizontal.png"  height="40"  alt="sgw Logo" >
-    
-</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-            <div class="navbar-nav ">
-            <a class="nav-item nav-link" href="#">Diseño Web</a>
-            <a class="nav-item nav-link" href="#">Identidad Web</a>
-            <a class="nav-item nav-link " href="#">Diseño Gráfico</a>
-            <a class="nav-item nav-link " href="contact.html">Contactanos!</a>
-            </div>
+  <header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light navMio">
+  <a class="navbar-brand" href="index.html">
+    <img class="navlogo" src="../img/sghorizontal.png"    alt="sgw Logo" > 
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon blanco"></span>
+  </button>
+  <div class="collapse navbar-collapse"  id="navbarNavDropdown">
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#diseno" id="enlaceDiseno">Diseño Web</a>
+      </li>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#identidad" id="enlaceIdentidad">Identidad Visual</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Gráfica
+        </a>
+        <div class="dropdown-menu desp" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Diseños</a>
+          <a class="dropdown-item" href="#">Branding</a>
+          <a class="dropdown-item" href="#">Algo más</a>
         </div>
-        <div class="navbar-nav">
-           
-        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">Contactanos!</a> 
+      </li>
+    </ul>
+   
+  </div>
+ 
 </nav>
+</header>
 <div class="container text-center m-auto">
     <div class="col-lg-8  m-auto">
         <form>

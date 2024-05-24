@@ -14,6 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Condensed:ital,wght@0,300;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -26,24 +27,44 @@
 </head>
 <body>
 
-<nav class="navbar navbar-light bg-light justify-content-between sticky-top">
+  <header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light navMio">
   <a class="navbar-brand" href="index.html">
     <img class="navlogo" src="../img/sghorizontal.png"    alt="sgw Logo" > 
   </a>
-  <form class="form-inline">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon blanco"></span>
   </button>
-      <div class="collapse navbar-collapse divnav  " id="navbarNavAltMarkup" >
-          <div class="navbar-nav dflex  " >
-              <a class="nav-item nav-link " href="#diseno" id="enlaceDiseno">Diseño Web</a>
-              <a class="nav-item nav-link " href="#identidad" id="enlaceIdentidad">Identidad Visual</a>
-              <a class="nav-item nav-link " href="#grafica" id="enlaceGrafica">Diseño Gráfico</a>
-              <button class="btn btn-light border-0 bg-transparent " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">CONTACTANOS!</button>
-          </div>
-      </div>  </form>
+  <div class="collapse navbar-collapse"  id="navbarNavDropdown">
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html" id="enlaceDiseno">Diseño Web</a>
+      </li>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#identidad" id="enlaceIdentidad">Identidad Visual</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Gráfica
+        </a>
+        <div class="dropdown-menu desp" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Diseños</a>
+          <a class="dropdown-item" href="#">Branding</a>
+          <a class="dropdown-item" href="#">Algo más</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">Contactanos!</a> 
+      </li>
+    </ul>
+   
+  </div>
+ 
 </nav>
-<div class="container-fluid " >
+</header>
+   
+<div class="container-fluid fondo" >
     <div class="row ">
         <div class="col-12 fondo-container " id="" >
          
@@ -68,6 +89,30 @@
            
         </div>
       </div>
+      <div class="container-fluid d-flex justify-content-center align-items-center fondotecno">
+        <div class="row">
+          <div class="col-lg-2 col-md-8 col-sm-12 d-flex justify-content-center tecno">
+            <img class=" " src="../img/brand.png" alt="">
+          </div>
+          <div class="col-lg-2 col-md-8 col-sm-12 d-flex justify-content-center tecno">
+            <img class="" src="../img/wordpress.png" alt="">
+          </div>
+          <div class="col-lg-2 col-md-8 col-sm-12 d-flex justify-content-center tecno">
+            <img class="" src="../img/consultoria.png" alt="">
+          </div>
+          <div class="col-lg-2 col-md-8 col-sm-12 d-flex justify-content-center tecno">
+            <img class="" src="../img/mantenimiento.png" alt="">
+          </div>
+          <div class="col-lg-2 col-md-8 col-sm-12 d-flex justify-content-center tecno">
+            <img class="" src="../img/tiendan.png" alt="">
+          </div>
+          <div class="col-lg-2 col-md-8 col-sm-12 d-flex justify-content-center tecno">
+            <img class="" src="../img/desarrollo.png" alt="">
+          </div>
+    
+        </div>
+      </div>
+      
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
           <div class="offcanvas-header ">
             <h5 id="offcanvasRightLabel" >Contacto</h5>
@@ -94,24 +139,7 @@
     </div>
 
   </div>
-  <div class="container-fluid d-flex justify-content-center align-items-center">
-    <div class="row">
-      <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
-        <img class=" " src="../img/branding-banner.png" alt="">
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
-        <img class="" src="../img/branding-banner.png" alt="">
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
-        <img class="" src="../img/branding-banner.png" alt="">
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
-        <img class="" src="../img/branding-banner.png" alt="">
-      </div>
 
-    </div>
-  </div>
-  
   <div class="container " >
       <div class="row ">
         <div class="col-lg-12  m-auto cajas" id="diseno" style="display:none; " >

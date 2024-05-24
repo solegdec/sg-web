@@ -13,8 +13,12 @@ text-transform: uppercase;
 .navlogo{
  width:20rem; 
 }
+.fondo{
+  margin-top: 2%;
+  background-color: #486b6c;
+}
 .fondo-container{
-position: relative;
+  position: relative;
   overflow: hidden;
   width: 100%;
   opacity: 0.7;
@@ -22,13 +26,28 @@ position: relative;
   background-position: center;
   animation: cambiar-fondo 15s infinite linear;
   padding:5%;
+  box-shadow: -12px 26px 29px -33px rgba(0,0,0,0.75);
   
+}
+h2{
+  color: #ff5e00;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+ 
+}
+
+.tecno{
+  background-color: #486b6c;
+}
+.tecno img{
+  height: 200px;
+
 }
 .texto-izquierda,
 .texto-derecha {
   position: absolute;
   top: 50%;
-  color: white;
+ 
   opacity: 0;
   animation: entrada-texto-lateral 2s ease forwards 3s;
 }
@@ -54,7 +73,6 @@ position: relative;
   .texto-video2 {
     position: relative;
     z-index: 1;
-    color: rgb(58, 57, 57);  
     text-align: center;
     padding: 2rem;
     animation: entrar-derecha 3s ease forwards ;
@@ -63,16 +81,13 @@ position: relative;
   .texto-video3 {
     position: relative;
     z-index: 1;
-    color: rgb(58, 57, 57); 
     text-align: center;
     padding: 2rem;
     animation: entrar-derecha 3s ease forwards  ;
     animation-delay: 4.5s;
   }
   .texto-video1,.texto-video2,.texto-video3{
-    text-shadow:2px 2px 2px  #f7f8f8;
-    color:  #171818;
-    font-weight: bold;
+    text-shadow:2px 2px 2px  #000000;
     /* font-size: 2em; */
     opacity: 0; 
     
@@ -180,6 +195,13 @@ to {
 opacity: 1;
 }
 }
+.footer{
+  box-shadow: -12px -23px 29px -33px rgba(0,0,0,0.75);
+}
+.navMio{
+  box-shadow: -12px 26px 29px -33px rgba(0,0,0,0.75);
+}
+
 
 /*------------------------------------------------*/
 /*media queries*/
@@ -193,11 +215,13 @@ opacity: 1;
   .texto-derecha{
     display:none;
   }
-}
+  .fondo{
+    margin-top: 10%;
+  }
 
 /* Media query para celular */
 @media only screen and (max-width: 480px) {
-  
+ 
 }
 
 
