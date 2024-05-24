@@ -16,6 +16,8 @@ text-transform: uppercase;
 .fondo{
   margin-top: 2%;
   background-color: #486b6c;
+  box-shadow: -12px 26px 29px -33px rgba(0,0,0,0.75);
+
 }
 .fondo-container{
   position: relative;
